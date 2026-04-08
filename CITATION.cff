@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Vallado
+    given-names: Carlos
+title: "Carlos Software"
+version: 1.0.1
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19072822
+date-released: 2026-04-08
