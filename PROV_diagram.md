@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     %% Agents
     Laura([Agent: Laura])
@@ -23,29 +24,30 @@ graph TD
     Ent7(Entity: Published Paper)
 
     %% Relationships
-    Laura -. wasAssociatedWith .-> Act1
-    Act1 -- wasGeneratedBy --> Ent1
+    Laura -.->|wasAssociatedWith| Act1
+    Act1 -->|wasGeneratedBy| Ent1
     
-    Ent1 -. used .-> Act2
-    JackJill -. wasAssociatedWith .-> Act2
-    Act2 -- wasGeneratedBy --> Ent2
+    Ent1 -.->|used| Act2
+    JackJill -.->|wasAssociatedWith| Act2
+    Act2 -->|wasGeneratedBy| Ent2
     
-    Laura -. wasAssociatedWith .-> Act3
-    Ent1 -. used .-> Act3
-    Act3 -- wasGeneratedBy --> Ent3
-    Ent3 -. wasRevisionOf/wasDerivedFrom .-> Ent1
+    Laura -.->|wasAssociatedWith| Act3
+    Ent1 -.->|used| Act3
+    Act3 -->|wasGeneratedBy| Ent3
+    Ent3 -.->|wasRevisionOf| Ent1
     
-    Ent3 -. used .-> Act4
-    PeterPaula -. wasAssociatedWith .-> Act4
-    Act4 -- wasGeneratedBy --> Ent4
+    Ent3 -.->|used| Act4
+    PeterPaula -.->|wasAssociatedWith| Act4
+    Act4 -->|wasGeneratedBy| Ent4
     
-    Ent2 -. used .-> Act5
-    Ent4 -. used .-> Act5
-    Zack -. wasAssociatedWith .-> Act5
-    Act5 -- wasGeneratedBy --> Ent5
+    Ent2 -.->|used| Act5
+    Ent4 -.->|used| Act5
+    Zack -.->|wasAssociatedWith| Act5
+    Act5 -->|wasGeneratedBy| Ent5
     
-    Ent5 -. used .-> Act6
-    Ent6 -. used .-> Act6
-    Zack -. wasAssociatedWith .-> Act6
-    Laura -. wasAssociatedWith .-> Act6
-    Act6 -- wasGeneratedBy --> Ent7
+    Ent5 -.->|used| Act6
+    Ent6 -.->|used| Act6
+    Zack -.->|wasAssociatedWith| Act6
+    Laura -.->|wasAssociatedWith| Act6
+    Act6 -->|wasGeneratedBy| Ent7
+```
